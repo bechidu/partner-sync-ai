@@ -1,0 +1,115 @@
+{
+  "partner_name": "NEW_PARTNER",
+  "transport": "sftp",
+  "source": {
+    "file_url": "C:\\Users\\chidanandaswamy.c\\Documents\\Chida\\POC\\uploads\\uploaded_NEW.PARTNER.tmp"
+  },
+  "fields": [
+    {
+      "partner_field": "AWB",
+      "inferred_type": "string",
+      "example_value": "ABC123456",
+      "short_description": "Air Way Bill",
+      "mapped_to": "tracking_id",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "PickupDate",
+      "inferred_type": "datetime",
+      "example_value": "2025-11-12T08:00:00Z",
+      "short_description": "Pickup Date",
+      "mapped_to": "pickup_date",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "FromCity",
+      "inferred_type": "string",
+      "example_value": "Bangalore",
+      "short_description": "From City",
+      "mapped_to": "origin.city",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "ToCity",
+      "inferred_type": "string",
+      "example_value": "Bengaluru",
+      "short_description": "To City",
+      "mapped_to": "destination.city",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "WeightKg",
+      "inferred_type": "number",
+      "example_value": 2.4,
+      "short_description": "Weight in Kg",
+      "mapped_to": "package.weight_kg",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "LengthCm",
+      "inferred_type": "number",
+      "example_value": 30,
+      "short_description": "Length in Cm",
+      "mapped_to": "package.dimensions.length_cm",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "WidthCm",
+      "inferred_type": "number",
+      "example_value": 20,
+      "short_description": "Width in Cm",
+      "mapped_to": "package.dimensions.width_cm",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "HeightCm",
+      "inferred_type": "number",
+      "example_value": 10,
+      "short_description": "Height in Cm",
+      "mapped_to": "package.dimensions.height_cm",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "ReceiverName",
+      "inferred_type": "string",
+      "example_value": "Arjun",
+      "short_description": "Receiver Name",
+      "mapped_to": "customer_contact.name",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "ReceiverPhone",
+      "inferred_type": "string",
+      "example_value": "+919812345678",
+      "short_description": "Receiver Phone",
+      "mapped_to": "customer_contact.phone",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "ServiceType",
+      "inferred_type": "string",
+      "example_value": "express",
+      "short_description": "Service Type",
+      "mapped_to": null,
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "Status",
+      "inferred_type": "string",
+      "example_value": "PICKED_UP",
+      "short_description": "Status",
+      "mapped_to": "status",
+      "confidence": 1.0
+    },
+    {
+      "partner_field": "StatusTS",
+      "inferred_type": "datetime",
+      "example_value": "2025-11-12T09:00:00Z",
+      "short_description": "Status Timestamp",
+      "mapped_to": "status_timestamp",
+      "confidence": 1.0
+    }
+  ],
+  "transform_snippet": "",
+  "notes": ""
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ShipmentCanonical",
+  "type": "object",
+  "properties": {
+    "tracking_id": {
+      "type": "string",
+      "description": "Unique tracking identifier for the shipment"
+    },
+    "pickup_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when the shipment was picked up"
+    },
+    "origin": {
+      "type": "object",
+      "description": "Origin location of the shipment",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "Origin city"
+        }
+      },
+      "required": ["city"]
+    },
+    "destination": {
+      "type": "object",
+      "description": "Destination location of the shipment",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "Destination city"
+        }
+      },
+      "required": ["city"]
+    },
+    "package": {
+      "type": "object",
+      "description": "Package information",
+      "properties": {
+        "weight_kg": {
+          "type": "number",
+          "description": "Weight of the package in kilograms"
+        },
+        "dimensions": {
+          "type": "object",
+          "description": "Package dimensions in centimeters",
+          "properties": {
+            "length_cm": {
+              "type": "number",
+              "description": "Package length in centimeters"
+            },
+            "width_cm": {
+              "type": "number",
+              "description": "Package width in centimeters"
+            },
+            "height_cm": {
+              "type": "number",
+              "description": "Package height in centimeters"
+            }
+          },
+          "required": ["length_cm", "width_cm", "height_cm"]
+        }
+      },
+      "required": ["weight_kg"]
+    },
+    "customer_contact": {
+      "type": "object",
+      "description": "Receiver or consignee contact details",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the receiver/consignee"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the receiver/consignee"
+        }
+      },
+      "required": ["name", "phone"]
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the shipment"
+    },
+    "status_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the current status was recorded"
+    }
+  },
+  "required": [
+    "tracking_id",
+    "destination",
+    "status",
+    "status_timestamp",
+    "customer_contact"
+  ]
+}
